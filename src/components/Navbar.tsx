@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { logo, menu, close } from "../assets";
-import { styles } from "../staticData/styles";
 import { navLinks } from "../staticData";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, zoomIn } from "../motion/motion";
