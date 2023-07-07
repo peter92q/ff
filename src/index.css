@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
+}
+
+.violet-gradient {
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
+}
+
+.green-pink-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.purple__gradient {
+  background: linear-gradient(90deg, #5a0058 0%, #560155 100%);
+  filter: blur(700px);
+}
+ 
+
+.orbit{
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.shadow-text {
+  text-shadow: -4px 4px 1px rgba(128, 8, 209, 0.5);
+}
+
+.responsive-text {
+  font-size: calc(25px + 0.5vw);
+}
+
+.responsive-text2 {
+  font-size: calc(18px + 0.4vw);
+}
+
+.responsive-text3 {
+  font-size: calc(30px + 0.7vw);
+}
+
+.responsivetext { 
+  @apply text-[24px] lg:text-[27px] xl:text-[30px];
+}
+
+.responsivetext2 { 
+  @apply text-[15px] sm:text-[17px] md:text-[16px] lg:text-[18px] xl:text-[20px];
+}
+
+.swiper-pagination-bullet {
+  transform: translateY(10px);
+}
