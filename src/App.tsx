@@ -1,22 +1,25 @@
 import { BrowserRouter } from "react-router-dom";
-
 import { About, Contact, Certificates, Feedbacks, Hero, Navbar, Projects } from "./components";
+import { useState } from "react";
+
 
 const App = () => {
+  const [selectedPage, setSelectedPage] = useState<string | null>(null)
+
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-[#050816] overflow-hidden'>
+      <div className='relative z-0 dd overflow-hidden'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar />
-          <Hero /> 
+          <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+          <Hero setSelectedPage={setSelectedPage}/> 
         </div> 
-        <About />
-        <Certificates />
+        <About setSelectedPage={setSelectedPage}/>
+        <Certificates setSelectedPage={setSelectedPage}/>
    
-        <Projects />
-        <Feedbacks />
+        <Projects setSelectedPage={setSelectedPage}/>
+        <Feedbacks setSelectedPage={setSelectedPage}/>
         <div className='relative z-0'>
-          <Contact />
+          <Contact setSelectedPage={setSelectedPage}/>
         </div>
       </div>
     </BrowserRouter>

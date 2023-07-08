@@ -6,12 +6,20 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../staticData/styles";
 import { certificates } from "../staticData";
-import { Wrapper } from "../hoc";
-import { textVariant } from "../motion/motion";
+import { staggerContainer, textVariant } from "../motion/motion";
 import { meta } from "../assets";
-import { Certificates } from "../staticData/types";
+import { Certificates} from "../staticData/types";
+import { SetStateAction } from "react";
  
-const CertificateCard = ({ certificate }:{certificate: Certificates}) => {
+const CertificateCard = (
+  { 
+    certificate,  
+  }
+  :
+  {
+    certificate: Certificates,
+  }
+) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -66,10 +74,25 @@ const CertificateCard = ({ certificate }:{certificate: Certificates}) => {
   );
 };
 
-const CertificatesPage = () => {
-  return (
-    <>
-      <motion.div variants={textVariant(0.3)}>
+const CertificatesPage = ({
+  setSelectedPage 
+}:
+{
+  setSelectedPage: React.Dispatch<SetStateAction<string | null>>;
+}
+) => {
+  return ( 
+    <motion.div
+      variants={staggerContainer}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: true, amount: 0.25 }}
+      className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+      id="certificates"
+    >
+      <motion.div
+        onViewportEnter={()=>setSelectedPage("certificates")} 
+        variants={textVariant(0.3)}>
         <p className={`${styles.sectionSubText} text-center`}>
           Completed courses
         </p>
@@ -89,8 +112,8 @@ const CertificatesPage = () => {
         </VerticalTimeline>
         
       </div>
-    </>
+    </motion.div>
   );
 };
 
-export default Wrapper(CertificatesPage, "certificates");
+export default CertificatesPage;

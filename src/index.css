@@ -74,4 +74,11 @@
 
 .swiper-pagination-bullet {
   transform: translateY(10px);
+  width: 15px;
+  height: 15px;
+  background-color: purple;
+}
+
+.dd {
+  background: linear-gradient(90deg, #101a48, #111840, #111639, #111431, #11112a, #100e23, #0e0b1c, #0a0716, #05040d, #000000);
 }

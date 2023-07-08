@@ -1,13 +1,10 @@
-
-import { Wrapper } from "../hoc";
 import { pete } from "../assets";
 import { motion } from "framer-motion";
-import { fadeIn, slideIn, textVariant } from "../motion/motion";
+import { fadeIn, slideIn, staggerContainer, textVariant } from "../motion/motion";
 import { styles } from "../staticData/styles";
 import { services } from "../staticData";
 import { Services, stack } from "../staticData/types";
-
-
+import { SetStateAction } from "react";
 
 const ServiceCard = ({ service, index }:{service: Services; index:number}) => (
     <motion.div
@@ -47,14 +44,23 @@ const ServiceCard = ({ service, index }:{service: Services; index:number}) => (
     </motion.div>
 );
 
-const About = () => {
-  return (
-    <>
+const About = ({setSelectedPage}:{setSelectedPage: React.Dispatch<SetStateAction<string | null>>;}) => {
+  return ( 
+    <motion.div 
+      variants={staggerContainer}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: false, amount: 0.25 }}
+      className={`${styles.padding} max-w-7xl mx-auto z-0 relative`}
+      id="about"
+    > 
       <motion.div
+      onViewportEnter={()=>setSelectedPage("about")}
       variants={textVariant(0.3)}
       >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
+      
       </motion.div>
 
     <div className="flex flex-col sm:flex-row ">
@@ -68,12 +74,10 @@ const About = () => {
           architecture, virtual DOM and efficiency enable me to create highly responsive and feature-rich user 
           interfaces. TypeScript enhances the development process by adding static typing for improved code quality. 
           On the backend, I utilize .NET Core because it's an incredibly robust building platform, offering 
-          a feature rich ecosystem, my favorite framework being ASP.NET Core. It's optimized to use minimal hosting
-          and supports MVC pattern designs which allow me to create lightweight, fast and scalable RESTful APIs 
-          with JSON serialization. The cherry on top being C# which is a strongly typed language that 
-          utilizes memory allocation and naturally underlines a lot of potential errors before runtime. 
-          The seamless integration of React, TypeScript and .NET Core creates a cohesive tech stack that 
-          empowers me to design performant and scalable web applications.
+          a feature rich ecosystem, my favorite framework being ASP.NET Core. I can't forget to mention C# as well, 
+          a strongly typed language that utilizes memory allocation and naturally underlines a lot of potential 
+          errors before runtime. The seamless integration of React, TypeScript and .NET Core creates a cohesive 
+          tech stack that empowers me to design performant and scalable web applications.
       </motion.p>
         <motion.div 
           variants={slideIn("right", "tween", 0.2, 1)}
@@ -81,20 +85,17 @@ const About = () => {
           <img src={pete} alt="intro_pic" className="translate-y-[-90px]"/>
         </motion.div>
         </div>
-      
         <p className="flex w-full justify-center items-center responsive-text3 mt-[100px]
           font-bold">Tech stack
         </p>
-    
-        
       <div className='mt-20 flex md:flex-row flex-col gap-10 justify-center items-center translate-y-[-20px]'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} service={service} />
         ))}
       </div>  
-    </>
+    </motion.div>
   );
 };
 
-export default Wrapper(About, "about");
+export default About;
 

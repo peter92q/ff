@@ -18,3 +18,13 @@ export interface Certificates{
     points: string[],
     link: string;
 }
+
+export enum SelectedPage {
+    Home = "",
+    About = "about",
+    Certificates = "certificates",
+    Contact = "contact",
+    Projects = "projects",
+    Feedbacks = "feedbacks"
+
+}

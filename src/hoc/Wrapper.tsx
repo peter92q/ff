@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../staticData/styles";
 import { staggerContainer } from "../motion/motion";
-
+  
 const Wrapper = (Component: React.ComponentType<any>, idName: string) =>
   function HOC() {
     return (
@@ -15,7 +15,7 @@ const Wrapper = (Component: React.ComponentType<any>, idName: string) =>
         <span className='hash-span' id={idName}>
           &nbsp;
         </span>
- 
+  
         <Component />
       </motion.section>
     );

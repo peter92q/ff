@@ -1,12 +1,18 @@
 import { motion } from "framer-motion";
 import { styles } from "../staticData/styles";
-import { slideIn } from "../motion/motion";
-import { Wrapper } from "../hoc";
+import { slideIn, staggerContainer } from "../motion/motion";
+import { SetStateAction } from "react";
 
-const Hero = () => {
+const Hero = ({setSelectedPage}:{setSelectedPage: React.Dispatch<SetStateAction<string | null>>}) => {
   return (
-    <section className="relative w-full h-screen mx-auto">
-      <div
+    <motion.div
+    variants={staggerContainer}
+    initial='hidden'
+    whileInView='show'
+    viewport={{ once: false, amount: 0.25 }} 
+      className="relative w-full h-screen mx-auto">
+      <motion.div
+        onViewportEnter={()=>setSelectedPage(null)}
         className={`absolute inset-0 top-[240px]  max-w-7xl mx-auto ${styles.paddingX} 
                     flex flex-row items-start gap-5`}
         >
@@ -29,9 +35,9 @@ const Hero = () => {
             fullstack web applications
           </motion.p>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.div> 
   );
 };
 
-export default Wrapper(Hero,"");
+export default Hero;

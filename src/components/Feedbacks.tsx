@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
-import { Wrapper } from "../hoc";
-import { fadeIn, textVariant } from "../motion/motion";
+import { fadeIn, staggerContainer, textVariant } from "../motion/motion";
 import { styles } from "../staticData/styles";
 import { references } from "../staticData";
-import { useEffect, useRef, useState } from "react";
+import { SetStateAction, useEffect, useRef, useState } from "react";
 
-const Feedbacks = () => {
+const Feedbacks = (
+  {
+    setSelectedPage
+  }
+  :
+  {
+    setSelectedPage: React.Dispatch<SetStateAction<string|null>>;
+  }
+  ) => {
   const imgRef = useRef<HTMLImageElement | null>(null);
   const [selectedImage, setSelectedImage] = useState<number>(4)
 
@@ -24,6 +31,17 @@ const Feedbacks = () => {
   }, []);
    
   return (
+<motion.div
+    variants={staggerContainer}
+    initial='hidden'
+    whileInView='show'
+    viewport={{ once: false, amount: 0.25 }}
+    className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+    id="feedbacks"
+>
+  <motion.div 
+    onViewportEnter={()=>setSelectedPage("feedbacks")}
+    className="violet-gradient p-[1px] rounded-xl">
    <div
     className="bg-[#1c1733] w-full h-full rounded-xl p-10 z-1">
     <motion.p 
@@ -60,7 +78,9 @@ const Feedbacks = () => {
           ))}
       </div>
    </div>
+  </motion.div>
+  </motion.div>
   );
 };
 
-export default Wrapper(Feedbacks, "");
+export default Feedbacks;

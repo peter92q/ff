@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../staticData/styles";
-import { Wrapper } from "../hoc";
-import { slideIn } from "../motion/motion";
+import { slideIn, staggerContainer } from "../motion/motion";
 
-const Contact = () => {
+const Contact = ({setSelectedPage}:{setSelectedPage: React.Dispatch<SetStateAction<string | null>>;}) => {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -63,13 +62,22 @@ const Contact = () => {
 
   return (
     <motion.div
-    variants={slideIn("left", "tween", 0.2, 1)}
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse mx-auto bg-[#1c1733] rounded-xl gap-10 overflow-hidden`}
-    >
-      <div
-        
-        className='flex-1 bg-black-100 p-8 rounded-2xl flex flex-col md:flex-row'
+      variants={staggerContainer}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: false, amount: 0.25 }}
+      className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+      id="contact"
       >
+      <motion.div
+        onViewportEnter={()=>setSelectedPage("contact")}
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className={`xl:mt-12 flex xl:flex-row flex-col-reverse mx-auto p-[1px] violet-gradient rounded-xl gap-10 overflow-hidden`}
+      >
+        <div
+          
+          className='flex-1 bg-black-100 p-8 rounded-xl flex flex-col md:flex-row bg-[#1c1733]'
+        >
         <div>
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -135,10 +143,10 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-        
       </div>
-    </motion.div>
+    </motion.div>  
+  </motion.div>
   );
 };
 
-export default Wrapper(Contact, "contact");
+export default Contact;
