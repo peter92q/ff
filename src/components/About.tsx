@@ -3,7 +3,7 @@ import { Wrapper } from "../hoc";
 import { pete } from "../assets";
 import { motion } from "framer-motion";
 import { fadeIn, slideIn, textVariant } from "../motion/motion";
-import { styles, styles2 } from "../staticData/styles";
+import { styles } from "../staticData/styles";
 import { services } from "../staticData";
 import { Services, stack } from "../staticData/types";
 
@@ -53,10 +53,6 @@ const About = () => {
       <motion.div
       variants={textVariant(0.3)}
       >
-        <div className={styles2.pinkGradient}/>
-        <div className={styles2.purpleGradient}/>
-        <div className={styles2.blueGradient}/>
-        
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
