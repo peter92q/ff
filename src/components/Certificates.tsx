@@ -80,9 +80,6 @@ const CertificatesPage = () => {
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
-        <div className="absolute z-[0] w-[40%] h-[40%] right-[55%] bottom-0 sm:bottom-[70%] lg:opacity-50 rounded-full pink__gradient"/>
-        <div className="absolute z-[0] w-[40%] h-[40%] right-[55%] bottom-0 sm:bottom-[70%] lg:opacity-50 rounded-full purple__gradient"/>
-
           {certificates.map((certificate, index) => (
             <CertificateCard
               key={`certificate-${index}`}

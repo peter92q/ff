@@ -14,10 +14,4 @@ const styles = {
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
 };
 
-const styles2 = {
-  pinkGradient: `absolute z-[0] w-[40%] h-[40%] right-[25%] bottom-0 sm:bottom-[40%] lg:opacity-50 rounded-full pink__gradient`,
-  purpleGradient: `absolute z-[0] w-[40%] h-[40%] right-[25%] bottom-0 sm:bottom-[40%] lg:opacity-50 rounded-full purple__gradient`,
-  blueGradient: `absolute z-[0] w-[40%] h-[40%] right-[25%] bottom-0 sm:bottom-[40%] lg:opacity-50 rounded-full blue__gradient`,
-}; 
-
-export { styles, styles2 };
+export { styles };

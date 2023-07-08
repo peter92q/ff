@@ -113,9 +113,6 @@ const Projects = () => {
                     </p>
           }
           <div className="flex flex-row">
-          <div className="absolute z-[0] w-[40%] h-[40%] right-[55%] bottom-0 sm:bottom-[70%] lg:opacity-50 rounded-full pink__gradient"/>
-        <div className="absolute z-[0] w-[40%] h-[40%] right-[55%] bottom-0 sm:bottom-[70%] lg:opacity-50 rounded-full purple__gradient"/>
-        <div className="absolute z-[0] w-[40%] h-[40%] right-[55%] bottom-0 sm:bottom-[70%] lg:opacity-50 rounded-full blue__gradient"/>
             <p className="text-red-500 mr-2">Important: </p> 
             <p
               onClick={()=>setOpenInfo(prev=>!prev)} 

@@ -35,22 +35,6 @@
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
-.blue__gradient {
-  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
-  filter: blur(123px);
-}
-
-.pink__gradient {
-  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
-  filter: blur(900px);
-}
-
-.purple__gradient {
-  background: linear-gradient(90deg, #5a0058 0%, #560155 100%);
-  filter: blur(700px);
-}
- 
-
 .orbit{
   animation: spin 20s linear infinite;
 }
