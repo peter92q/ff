@@ -22,7 +22,7 @@ export const projects = [
       "Positions with losses exceeding investment amount are automatically closed at -100%",
     ], 
     logo: traderlogo,
-    link: "https://app.peter92q.com:30004",
+    link: "https://app.peter92.com:30004",
     stack: {
       frontend: `Vite, React, Typescript, Highcharts, Axios, Redux Toolkit, Tailwind CSS, 
                  Material UI`,
@@ -50,7 +50,7 @@ export const projects = [
       "Infinite scroll/pagination effect",
     ],
     logo: hive,
-    link: "https://app.peter92q.com:30002",
+    link: "https://app.peter92.com:30002",
     stack: {
       frontend: `Vite, React, Typescript, Axios, Redux Toolkit, Tailwind CSS, 
                  Material UI, React Spinners`,
@@ -74,7 +74,7 @@ export const projects = [
       "Individual product pages",
     ],
     logo: clotherlogo,
-    link: "https://app.peter92q.com:30000",
+    link: "https://app.peter92.com:30000",
     stack: {
       frontend: `Vite, React, Typescript, Axios, Redux Toolkit, Tailwind CSS, 
                  Material UI, React Spinners`,
