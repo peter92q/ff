@@ -71,11 +71,11 @@ const About = ({setSelectedPage}:{setSelectedPage: React.Dispatch<SetStateAction
       >
           As an aspiring developer, I specialize in leveraging the powerful combination of React, 
           TypeScript, and .NET Core for building high-quality web applications. React's component-based 
-          architecture, virtual DOM and efficiency enable me to create highly responsive and feature-rich user 
-          interfaces. TypeScript enhances the development process by adding static typing for improved code quality. 
-          On the backend, I utilize .NET Core because it's an incredibly robust building platform, offering 
-          a feature rich ecosystem, my favorite framework being ASP.NET Core. I can't forget to mention C# as well, 
-          a strongly typed language that utilizes memory allocation and naturally underlines a lot of potential 
+          architecture, virtual DOM and wide selection of production grade libraries enable me to create 
+          responsive and feature-rich user interfaces. TypeScript enhances my development process by 
+          adding static typing for improved code quality. On the backend, I utilize .NET Core, 
+          an incredibly robust building platform, offering a feature rich ecosystem, my favorite framework being ASP.NET Core. 
+          Last but not least C#, a strongly typed language that utilizes memory allocation and naturally underlines a lot of potential 
           errors before runtime. The seamless integration of React, TypeScript and .NET Core creates a cohesive 
           tech stack that empowers me to design performant and scalable web applications.
       </motion.p>
