@@ -25,9 +25,7 @@ export default {
       
       '6xl4k' : '3840px'
     },
-    backgroundImage: {
-      "hero-pattern": "url('/src/assets/battle2.png')",
-    },
+
     animation: {
       text: 'text 5s ease infinite',
     },
