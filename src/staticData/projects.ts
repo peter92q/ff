@@ -74,7 +74,7 @@ export const projects = [
       "Individual product pages",
     ],
     logo: clotherlogo,
-    link: "https://app.peter92.com:30000",
+    link: "https://clother.peter92.com:30000",
     stack: {
       frontend: `Vite, React, Typescript, Axios, Redux Toolkit, Tailwind CSS, 
                  Material UI, React Spinners`,
