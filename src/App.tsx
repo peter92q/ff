@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Certificates, Feedbacks, Hero, Navbar, Projects } from "./components";
+import { About, Contact, Certificates, Hero, Navbar, Projects } from "./components";
 import { useState } from "react";
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
         <Certificates setSelectedPage={setSelectedPage}/>
    
         <Projects setSelectedPage={setSelectedPage}/>
-        <Feedbacks setSelectedPage={setSelectedPage}/>
+      
         <div className='relative z-0'>
           <Contact setSelectedPage={setSelectedPage}/>
         </div>
