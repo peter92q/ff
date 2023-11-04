@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        'battle':"url('/src/assets/battle2.png')"
+      }
+    },
     screens: {
       'sm': '640px',
 
