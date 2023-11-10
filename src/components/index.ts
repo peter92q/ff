@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import About from "./About";
 import Certificates from "./Certificates";
 import Projects from "./Projects";
-import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 
 export {
@@ -12,6 +11,5 @@ export {
   About,
   Certificates,
   Projects,
-  Feedbacks,
   Contact
 };
