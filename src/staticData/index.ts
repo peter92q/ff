@@ -24,10 +24,7 @@ import {
   jwt,
   postgresql,
   apache,
-  aws,
-  rec1,
-  rec2,
-  rec3
+  aws
 } from "../assets";
 
 export const navLinks = [
@@ -252,17 +249,5 @@ const certificates = [
   },
 ];
 
-const references = [
-  {
-    pic: rec1
-  },
-  {
-    pic: rec2
-  },
-  {
-    pic: rec3
-  }
-];
 
-
-export { services, technologies, certificates, references };
+export { services, technologies, certificates };
