@@ -25,6 +25,4 @@ export enum SelectedPage {
     Certificates = "certificates",
     Contact = "contact",
     Projects = "projects",
-    Feedbacks = "feedbacks"
-
 }
