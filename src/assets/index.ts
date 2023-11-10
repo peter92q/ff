@@ -46,16 +46,10 @@ import trader from "./2.png";
 import traderlogo from "./traderLogo.png";
 import clother from "./clother.jpg";
 import clotherlogo from "./clotherLogo.png";
-import rec1 from "./recs/1.jpg";
-import rec2 from "./recs/2.jpg";
-import rec3 from "./recs/3.jpg";
 import bg from "./bg.png";
 import table from "./table.png";
 
 export {
-  rec1,
-  rec2,
-  rec3,
   clother,
   clotherlogo,
   traderlogo,
