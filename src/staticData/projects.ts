@@ -29,6 +29,12 @@ export const projects = [
       backend: ".NET Core, C#, ASP.Net Core, Entity Framework, Identity Core, Coingecko API",
       deployment: "Apache http server + reverse proxy"
     },
+    challenges: [
+      "Converting timestamps from Coingecko to real financial data",
+      "Creating rate limitations to avoid 403 errors",
+      "Logic that closes leveraged positions if they go below 0 automatically",
+      "Creating a dynamic equity calculator that adjusts based on live price movements"
+    ],
     git: "https://github.com/peter92q/trader/tree/main"
   },
   {
@@ -57,6 +63,13 @@ export const projects = [
       backend: ".NET Core, C#, ASP.Net Core, Entity Framework, Identity Core, AWS S3, AWS RDS",
       deployment: "Apache http server + reverse proxy"
     },
+    challenges: [
+      "Relationships between data, one-to-many, many-to-many, data structures become convoluted",
+      "Queries need to be fast and efficient and it becomes progressively harder with so many collections and foreign keys",
+      "Infinite scroll effect that responds equally well on all devices is easier said than done",
+      "Inbox and chat feature are difficult to synchronize",
+      "Creating an image service which converts pic submissions to .jpg file extensions and then stores them on S3"
+    ],
     git: "https://github.com/peter92q/hive"
   },
   {
