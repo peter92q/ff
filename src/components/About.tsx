@@ -69,15 +69,12 @@ const About = ({setSelectedPage}:{setSelectedPage: React.Dispatch<SetStateAction
         variants={textVariant(0.5)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] '
       >
-          As an aspiring developer, I specialize in leveraging the powerful combination of React, 
-          TypeScript, and .NET Core for building high-quality web applications. React's component-based 
-          architecture, virtual DOM and wide selection of production grade libraries enable me to create 
-          responsive and feature-rich user interfaces. TypeScript enhances my development process by 
-          adding static typing for improved code quality. On the backend, I utilize .NET Core, 
-          an incredibly robust building platform, offering a feature rich ecosystem, my favorite framework being ASP.NET Core. 
-          Last but not least C#, a strongly typed language that utilizes memory allocation and naturally underlines a lot of potential 
-          errors before runtime. The seamless integration of React, TypeScript and .NET Core creates a cohesive 
-          tech stack that empowers me to design performant and scalable web applications.
+          My current work is centered around building fullstack apps in React 18, Typescipt, C#, ASP.NET, PostgresQL 
+          and serving + reverse proxying the production builds on my own server with the help of Apache and some
+          router configs. Although my specialty is in frontend, I believe frontend development is fullstack by nature, 
+          as you need to understand a lot of the backend architecture in order to efficiently work on advanced projects.
+          I also utilize React Native and Next.js for some mid-level prototypes as I have deep interest in learning
+          cutting edge tech with modern use cases.
       </motion.p>
         <motion.div 
           variants={slideIn("right", "tween", 0.2, 1)}
