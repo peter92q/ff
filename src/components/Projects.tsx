@@ -32,32 +32,43 @@ export function Swipe() {
                         hover:scale-105 rounded-full border-purple-600 border-[1px]"
                         />
                     </a>
-                <div className="w-full flex flex-col bg-[#090325] p-2 rounded-xl translate-y-[-5px]">
+                <div className="w-full flex flex-col bg-[#090325] p-2 rounded-xl translate-y-[-5px] overflow-y-scroll">
                     <img src={project.image} className='h-[50%] lg:w-full
                     rounded-xl object-cover'/>
-                    <div className="w-full text-start h-full my-2 space-y-1">
-                        <p className="responsive-text2 tracking-wider text-white font-bold ">Architecture:</p>
-                        <p className="text-[20px] font-bold ">Frontend</p>
+                    <div className="w-full text-start h-full my-2">
+                        <p className="responsive-text2 tracking-wider text-white font-bold ">Architecture</p>
+                        <p className="text-[20px] font-bold text-[#7e22ce]">Frontend</p>
                         <p className="font-medium">{project.stack?.frontend}</p>
-                        <p className="text-[20px] font-bold ">Backend</p>
-                        <p className="font-medium">{project.stack?.backend}</p>
-                        <p className="text-[20px] font-bold ">Deployment</p>
+                        <p className="text-[20px] font-bold text-[#7e22ce]">Backend</p>
+                        <p className="font-medium ">{project.stack?.backend}</p>
+                        <p className="text-[20px] font-bold text-[#7e22ce]">Deployment</p>
                         <p className="font-medium">{project.stack?.deployment}</p>
                     </div> 
+                    <p className="responsive-text2 tracking-wider text-white font-bold">{project.challenges?"Challenges":""}</p>
+                    <table className="w-full my-2">
+                      <tbody>
+                        {project.challenges?.map((challenge, index) => (
+                          <tr key={index} className="flex flex-row w-[100%]">
+                            <td className="text-[#7e22ce] text-center w-[5%] ">{index + 1}</td>
+                            <td className="w-[95%]">{challenge}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                     </div>
                   <div className='h-full w-full text-start md:ml-2'>
                   <div className="flex flex-row justify-center items-center sm:justify-start sm:items-start ">
                     <p className="responsivetext tracking-wider  font-bold px-[4px] ">
                       {project.name} 
                     </p>
-                    <img src={project.logo} className="w-[40px] h-[30px]"/>
+                    <img src={project.logo} className="w-[40px] h-[40px]"/>
                     <a 
                       target="_blank"
                       href={project.link}
                       className="text-[12px] px-2 cursor-pointer hover:opacity-80 decoration-none rounded-md bg-blue-600">
                         Link
                     </a>
-                    </div>
+                    </div> 
                     <p
                       style={{margin:0, padding:0}} 
                       className="responsivetext2 font-light text-center sm:text-start sm:translate-x-[3px] text-gray-400">
@@ -65,7 +76,7 @@ export function Swipe() {
                     </p>
                     <div className={`${index===0?"text-[14px] sm:text-[11px] md:text-[12px] xl:text-[13px]":"text-[19px] sm:text-[15px] md:text-[19px] lg:text-[12px] xl:text-[15px]"} 
                       flex flex-col tracking-wide leading-[30px] mt-2 ml-1`}>
-                      <p className="responsivetext2 text-white tracking-wider font-bold ">Features:</p>
+                      <p className="responsivetext2 text-white tracking-wider font-bold">Features</p>
                         {project.features?.map((feature,index)=>(
                           <div key={index} className="flex flex-row">
                             <p className="text-purple-700 text-[25px] mr-1">•</p>
